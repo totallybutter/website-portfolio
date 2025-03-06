@@ -32,14 +32,13 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(pointLight, ambientLight);
 
 //Audio
-
 const listener = new THREE.AudioListener();
 camera.add(listener);
 
 const sound = new THREE.Audio(listener);
 const audioLoader = new THREE.AudioLoader();
 
-audioLoader.load('/portfolio/audio/The Spinning Loaf Cat.mp3', (buffer) => {
+audioLoader.load(import.meta.env.BASE_URL + 'audio/The Spinning Loaf Cat.mp3', (buffer) => {
   sound.setBuffer(buffer);
   sound.setLoop(true);
   sound.setVolume(0.5);
