@@ -38,11 +38,13 @@ camera.add(listener);
 const sound = new THREE.Audio(listener);
 const audioLoader = new THREE.AudioLoader();
 
-audioLoader.load(import.meta.env.BASE_URL + 'audio/The Spinning Loaf Cat.mp3', (buffer) => {
-  sound.setBuffer(buffer);
-  sound.setLoop(true);
-  sound.setVolume(0.5);
-  sound.play();
+window.addEventListener('click', () => {
+  audioLoader.load(import.meta.env.BASE_URL + 'audio/the-spinning-loaf-cat.mp3', (buffer) => {
+    sound.setBuffer(buffer);
+    sound.setLoop(true);
+    sound.setVolume(0.5);
+    sound.play();
+  });
 });
 
 
