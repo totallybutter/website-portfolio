@@ -39,7 +39,7 @@ camera.add(listener);
 const sound = new THREE.Audio(listener);
 const audioLoader = new THREE.AudioLoader();
 
-audioLoader.load('/audio/The Spinning Loaf Cat.mp3', (buffer) => {
+audioLoader.load('/portfolio/audio/The Spinning Loaf Cat.mp3', (buffer) => {
   sound.setBuffer(buffer);
   sound.setLoop(true);
   sound.setVolume(0.5);
